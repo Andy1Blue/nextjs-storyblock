@@ -1,5 +1,6 @@
 import React from 'react';
 import DynamicComponent from '../components/DynamicComponent';
+import Navigation from '../components/Navigation';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
@@ -16,6 +17,8 @@ export default function Page({ story, preview }: any) {
         <title>{story ? story.name : 'My Site'}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Navigation />
 
       <header>
         <h1>{story ? story.name : 'My Site'}</h1>

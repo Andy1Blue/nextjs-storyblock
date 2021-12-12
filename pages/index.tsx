@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 // The Storyblok Client & hook
 import Storyblok, { useStoryblok } from '../utils/storyblok';
 import DynamicComponent from '../components/DynamicComponent';
+import Navigation from '../components/Navigation';
 
 export default function Home({ story, preview }: any) {
   const enableBridge = true; // load the storyblok bridge everywhere
@@ -18,15 +19,11 @@ export default function Home({ story, preview }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navigation />
+
       <header>
         <h1>Hello</h1>
       </header>
-
-      <h1>Products</h1>
-      <nav>
-        <a href="/products/washer">washer</a>
-        <a href="/products/dryer">dryer</a>
-      </nav>
 
       <DynamicComponent blok={story.content} />
     </div>
