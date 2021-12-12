@@ -2,7 +2,6 @@ export default async function preview(req: any, res: any) {
   const { slug = '' } = req.query;
   // get the storyblok params for the bridge to work
   const params = req.url.split('?');
-
   // Check the secret and next parameters
   // This secret should only be known to this API route and the CMS
   if (req.query.secret !== 'MY_SECRET_TOKEN') {
